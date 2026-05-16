@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOOD TIME PHOTO | Admin Dashboard</title>
+  <style>
+    :root { --bg:#0f172a; --card:#111827; --muted:#94a3b8; --text:#e2e8f0; --accent:#22c55e; --danger:#ef4444; }
+    * { box-sizing:border-box; }
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:linear-gradient(180deg,#0b1225,#0f172a); color:var(--text); }
+    header { padding:20px 24px; border-bottom:1px solid #1f2937; display:flex; justify-content:space-between; align-items:center; }
+    main { padding:24px; display:grid; gap:16px; grid-template-columns:repeat(auto-fit,minmax(240px,1fr)); }
+    .card { background:var(--card); border:1px solid #1f2937; border-radius:12px; padding:16px; }
+    .kpi { font-size:28px; font-weight:700; margin:8px 0 0; }
+    .muted { color:var(--muted); font-size:13px; }
+    .actions { grid-column:1/-1; display:flex; gap:12px; flex-wrap:wrap; }
+    button { border:0; border-radius:8px; padding:10px 14px; font-weight:600; cursor:pointer; }
+    .primary { background:var(--accent); color:#052e16; }
+    .warn { background:#f59e0b; color:#1f2937; }
+    .danger { background:var(--danger); color:#fff; }
+    table { width:100%; border-collapse:collapse; font-size:14px; }
+    th,td { text-align:left; padding:10px 8px; border-bottom:1px solid #1f2937; }
+    .status { padding:3px 8px; border-radius:999px; font-size:12px; }
+    .published { background:#14532d; color:#bbf7d0; }
+    .draft { background:#3f1d1d; color:#fecaca; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Admin Dashboard</h1>
+    <span class="muted">ログイン中: admin@goodtimephoto.jp</span>
+  </header>
+  <main>
+    <section class="card"><div class="muted">総投稿数</div><div class="kpi">128</div></section>
+    <section class="card"><div class="muted">公開中</div><div class="kpi">94</div></section>
+    <section class="card"><div class="muted">下書き</div><div class="kpi">34</div></section>
+    <section class="card"><div class="muted">今月の追加</div><div class="kpi">21</div></section>
+
+    <section class="card actions">
+      <button class="primary">新規投稿を作成</button>
+      <button class="warn">下書きを確認</button>
+      <button class="danger">アーカイブ整理</button>
+    </section>
+
+    <section class="card" style="grid-column:1/-1;">
+      <h2 style="margin-top:0;">最近の投稿</h2>
+      <table>
+        <thead>
+          <tr><th>タイトル</th><th>イベント</th><th>日付</th><th>状態</th></tr>
+        </thead>
+        <tbody>
+          <tr><td>Spring Festival Highlights</td><td>Spring Festival</td><td>2026-04-12</td><td><span class="status published">公開</span></td></tr>
+          <tr><td>Portrait Session Vol.7</td><td>Studio Portrait</td><td>2026-04-07</td><td><span class="status draft">下書き</span></td></tr>
+          <tr><td>Night Market Moments</td><td>Night Market</td><td>2026-03-30</td><td><span class="status published">公開</span></td></tr>
+        </tbody>
+      </table>
+    </section>
+  </main>
+</body>
+</html>
