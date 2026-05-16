@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>GOOD TIME PHOTO | Event Archive</title>
+  <style>
+    body { margin:0; font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif; background:#f8fafc; color:#0f172a; }
+    header { padding:24px; background:#0f172a; color:#e2e8f0; }
+    main { padding:24px; max-width:1100px; margin:auto; }
+    .filters { display:flex; gap:10px; flex-wrap:wrap; margin-bottom:20px; }
+    input,select { padding:10px; border:1px solid #cbd5e1; border-radius:8px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(220px,1fr)); gap:14px; }
+    .card { background:#fff; border:1px solid #e2e8f0; border-radius:12px; overflow:hidden; }
+    .thumb { height:130px; background:linear-gradient(135deg,#93c5fd,#c4b5fd); }
+    .meta { padding:12px; }
+    .event { font-weight:700; }
+    .date { color:#64748b; font-size:13px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Event Archive</h1>
+    <p>過去イベントのフォト投稿を検索・閲覧</p>
+  </header>
+  <main>
+    <div class="filters">
+      <input type="text" placeholder="イベント名で検索" />
+      <select>
+        <option>すべての年</option>
+        <option>2026</option>
+        <option>2025</option>
+      </select>
+      <select>
+        <option>表示順: 新しい順</option>
+        <option>表示順: 古い順</option>
+      </select>
+    </div>
+
+    <section class="grid">
+      <article class="card"><div class="thumb"></div><div class="meta"><div class="event">Spring Festival</div><div class="date">2026-04-12</div></div></article>
+      <article class="card"><div class="thumb"></div><div class="meta"><div class="event">Night Market</div><div class="date">2026-03-30</div></div></article>
+      <article class="card"><div class="thumb"></div><div class="meta"><div class="event">Studio Portrait</div><div class="date">2026-02-19</div></div></article>
+      <article class="card"><div class="thumb"></div><div class="meta"><div class="event">Autumn Walk</div><div class="date">2025-11-08</div></div></article>
+    </section>
+  </main>
+</body>
+</html>
